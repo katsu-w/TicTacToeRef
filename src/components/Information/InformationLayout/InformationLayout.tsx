@@ -1,8 +1,7 @@
 import './InformationLayout.scss';
 
-export function InformationLayout(props) {
-	const {} = props;
-	
+export function InformationLayout() {
+
 	return (
 		<div>
 			InformationLayout

@@ -15,10 +15,4 @@
 	--container-padding-x: #{rem(0)};
 	
 	--transition: 0.2s ease;
-	
-	--100vw: calc(100vw - var(--scrollbar-width));
-	
-	@include laptop {
-		--container-width: #{rem(1110)};
-	}
 }

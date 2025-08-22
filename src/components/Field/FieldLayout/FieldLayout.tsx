@@ -1,7 +1,6 @@
 import './FieldLayout.scss';
 
-export function FieldLayout(props) {
-	const {} = props;
+export function FieldLayout() {
 	
 	return (
 		<div>
