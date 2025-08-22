@@ -1,10 +1,19 @@
 import './FieldLayout.scss';
+import type { FC, ReactNode } from 'react';
 
-export function FieldLayout() {
+interface IFieldLayout {
+	field: string[],
+}
+
+export function FieldLayout({field}: IFieldLayout){
 	
 	return (
 		<div>
-			FieldLayout
+			{
+				field.map(cell => (
+					<div className="cell">{cell}</div>
+				))
+			}
 		</div>
 	);
 }

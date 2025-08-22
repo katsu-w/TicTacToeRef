@@ -1,8 +1,15 @@
 import FieldLayout from './FieldLayout';
 
-export function Field() {
+interface IField {
+	field: string[],
+	currentPlayer: 'X' | 'O',
+	isGameEnded: boolean,
+}
+
+export function Field(props: IField) {
+	const { field, currentPlayer, isGameEnded } = props;
 	
 	return (
-		<FieldLayout />
+		<FieldLayout field={field}></FieldLayout>
 	);
 }
