@@ -1,6 +1,11 @@
 import ControlPanelLayout from './ControlPanelLayout';
 
-export function ControlPanel() {
+interface IControlPanel {
+	isGameEnded: boolean,
+}
+
+export function ControlPanel(props: IControlPanel) {
+	const { isGameEnded } = props;
 	
 	return (
 		<ControlPanelLayout />
