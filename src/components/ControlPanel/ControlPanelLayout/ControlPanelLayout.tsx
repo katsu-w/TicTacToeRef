@@ -3,8 +3,8 @@ import './ControlPanelLayout.scss';
 export function ControlPanelLayout() {
 	
 	return (
-		<div>
-			ControlPanelLayout
-		</div>
+		<button className="retry-btn">
+			Начать заново
+		</button>
 	);
 }
