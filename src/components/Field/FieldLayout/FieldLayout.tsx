@@ -1,10 +1,18 @@
 import './FieldLayout.scss';
 
-export function FieldLayout() {
+interface IFieldLayout {
+	field: string[],
+}
+
+export function FieldLayout({field}: IFieldLayout){
 	
 	return (
-		<div>
-			FieldLayout
-		</div>
+		<section className="playground">
+			{
+				field.map((cell, index) => (
+					<button key={index} className="playground__cell">{cell}</button>
+				))
+			}
+		</section>
 	);
 }

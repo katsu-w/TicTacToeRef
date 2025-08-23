@@ -3,15 +3,22 @@ import Information from '../Information';
 import Field from '../Field';
 import ControlPanel from '../ControlPanel';
 
-export function AppLayout() {
-	
+interface IApp {
+	currentPlayer: 'X' | 'O',
+	isGameEnded: boolean,
+	isDraw: boolean,
+	field: string[],
+}
+
+export function AppLayout(props: IApp) {
+	const { currentPlayer, isGameEnded, isDraw, field } = props;
 	return (
 		<main
 			className="game container"
 		>
-			<Information />
-			<Field />
-			<ControlPanel />
+			<Information isGameEnded={isGameEnded} currentPlayer={currentPlayer} isDraw={isDraw} />
+			<Field field={field} currentPlayer={currentPlayer} isGameEnded={isGameEnded} />
+			<ControlPanel isGameEnded={isGameEnded} />
 		</main>
 	);
 }

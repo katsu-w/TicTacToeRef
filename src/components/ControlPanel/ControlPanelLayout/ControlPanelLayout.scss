@@ -1,3 +1,11 @@
-.control-panel-layout {
+@use '/src/styles/helpers' as *;
 
+.retry-btn {
+	padding: rem(8) rem(16);
+	margin: rem(4) auto rem(20);
+	color: var(--color-font);
+	background-color: var(--color-accent);
+	border: none;
+	border-radius: rem(16);
+	box-shadow: var(--shadow);
 }

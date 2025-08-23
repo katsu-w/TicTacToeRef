@@ -1,8 +1,26 @@
 import InformationLayout from './InformationLayout';
 
-export function Information() {
+interface IInformation {
+	currentPlayer: 'X' | 'O',
+	isGameEnded: boolean,
+	isDraw: boolean,
+}
+
+export function Information(props: IInformation) {
+	const { currentPlayer, isDraw, isGameEnded } = props;
+	let output: string;
+	
+	if (isGameEnded && isDraw) {
+		output = 'Ничья';
+	} else if (isGameEnded && !isDraw) {
+		output = `Победа: ${currentPlayer}`;
+	} else if (!isGameEnded && isDraw) {
+		output = 'Непредвиденная ошибка, перезапустите страницу';
+	} else {
+		output = `Ходит: ${currentPlayer}`;
+	}
 	
 	return (
-		<InformationLayout />
+		<InformationLayout>{output}</InformationLayout>
 	);
 }
