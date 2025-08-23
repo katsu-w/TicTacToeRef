@@ -8,8 +8,8 @@ interface IInformationLayoutProps {
 export function InformationLayout({children}: IInformationLayoutProps) {
 
 	return (
-		<div>
-			{children}
+		<div className="information">
+			<span>{children}</span>
 		</div>
 	);
 }

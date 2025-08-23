@@ -18,6 +18,8 @@
 		border-radius: rem(16);
 		border: none;
 		padding: 0;
+		box-shadow: var(--shadow);
+		user-select: none;
 		transition: var(--transition);
 		
 		&:hover {
