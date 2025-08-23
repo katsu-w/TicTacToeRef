@@ -1,5 +1,4 @@
 import './FieldLayout.scss';
-import type { FC, ReactNode } from 'react';
 
 interface IFieldLayout {
 	field: string[],
@@ -8,12 +7,12 @@ interface IFieldLayout {
 export function FieldLayout({field}: IFieldLayout){
 	
 	return (
-		<div>
+		<section className="playground">
 			{
-				field.map(cell => (
-					<div className="cell">{cell}</div>
+				field.map((cell, index) => (
+					<button key={index} className="playground__cell">{cell}</button>
 				))
 			}
-		</div>
+		</section>
 	);
 }

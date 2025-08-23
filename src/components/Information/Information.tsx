@@ -10,6 +10,6 @@ export function Information(props: IInformation) {
 	const { currentPlayer, isDraw, isGameEnded } = props;
 	
 	return (
-		<InformationLayout />
+		<InformationLayout>asd</InformationLayout>
 	);
 }

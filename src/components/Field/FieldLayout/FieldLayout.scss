@@ -1,4 +1,27 @@
-.cell {
-	background-color: var(--color-light);
-	color: var(--color-accent);
+@use '/src/styles/helpers' as *;
+
+.playground {
+	display: grid;
+	grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+	grid-gap: rem(16);
+	max-width: rem(500);
+	max-height: rem(500);
+	width: 100%;
+	height: 100%;
+	background-color: var(--color-playground);
+	border-radius: rem(16);
+	
+	&__cell {
+		font-size: rem(128);
+		color: var(--color-accent);
+		background-color: var(--color-light);
+		border-radius: rem(16);
+		border: none;
+		padding: 0;
+		transition: var(--transition);
+		
+		&:hover {
+			transform: scale(1.05);
+		}
+	}
 }
