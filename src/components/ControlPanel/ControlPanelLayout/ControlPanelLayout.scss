@@ -13,4 +13,8 @@
 	&:hover {
 		transform: scale(1.05);
 	}
+	
+	@include mobile-s {
+		margin-bottom: rem(90);
+	}
 }
