@@ -9,6 +9,7 @@ interface IField {
 export function Field(props: IField) {
 	const { field, setTurn, isGameEnded } = props;
 	
+	// define onClick function
 	function onClick(index: number) {
 		if (!isGameEnded) {
 			setTurn(index);

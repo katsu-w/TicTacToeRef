@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { WIN_PATTERNS } from './constants/constants.ts';
 
 export function App() {
-	
+	// const required states
 	const [currentPlayer, setCurrentPlayer] = useState<'X' | 'O'>('X');
 	const [isGameEnded, setIsGameEnded] = useState<boolean>(false);
 	const [isDraw, setIsDraw] = useState<boolean>(false);
@@ -15,6 +15,7 @@ export function App() {
 		'', '', '',
 	]);
 	
+	// check for game end and change current player
 	useEffect(() => {
 		if (checkIsDraw() && !checkIsVictory()) {
 			setIsDraw(true);
@@ -26,6 +27,7 @@ export function App() {
 		changeCurrentPlayer();
 	}, [field]);
 	
+	// check if someone is won
 	function checkIsVictory () {
 		for (const pattern in WIN_PATTERNS) {
 			if (
@@ -37,16 +39,19 @@ export function App() {
 		return false;
 	}
 	
+	// check if there is no free cells
 	function checkIsDraw() {
 		return !field.includes('');
 	}
 	
+	// change current turn player func
 	function changeCurrentPlayer() {
 		setCurrentPlayer(prev => {
 			return prev === 'X' ? 'O' : 'X';
 		});
 	}
 	
+	// add mark on field func
 	function setTurn(index: number) {
 		if (field[index]) return;
 		
@@ -57,6 +62,7 @@ export function App() {
 		});
 	}
 	
+	// clear field and set game ended / draw to false
 	function clearField() {
 		setField(
 			['','','',
