@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f23e773e-ad8e-4e88-83c2-0c1cfe5d3ea9" name="Changes" comment="fix path">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/icon-CJHHYi1W.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/index-CPwuUw-n.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/index-c4l7ByGi.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +53,7 @@
                 <list>
                   <RecentBranch>
                     <option name="branchName" value="deploy" />
-                    <option name="lastUsedInstant" value="1756045011" />
+                    <option name="lastUsedInstant" value="1756048169" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="dev" />
