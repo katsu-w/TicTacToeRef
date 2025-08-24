@@ -24,7 +24,10 @@ export function App() {
 		if (checkIsVictory()) {
 			return setIsGameEnded(true);
 		}
-		changeCurrentPlayer();
+		if (
+			field.includes('X') ||
+			field.includes('O')
+		) changeCurrentPlayer();
 	}, [field]);
 	
 	// check if someone is won
