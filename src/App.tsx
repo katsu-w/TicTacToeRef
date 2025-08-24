@@ -10,9 +10,28 @@ export function App() {
 	
 	const [field, setField] = useState([
 		'', '', '',
-		'', 'X', '',
+		'', '', '',
 		'', '', '',
 	]);
+	
+	function setTurn(index: number) {
+		if (field[index]) return;
+		setField((prevState) => {
+			let newField = [...prevState];
+			newField[index] = currentPlayer;
+			return newField;
+		});
+		setCurrentPlayer(prev => {
+			return prev === 'X' ? 'O' : 'X';
+		});
+	}
+	
+	function clearField() {
+		setField(
+			['','','',
+			'','','',
+			'','','',]);
+	}
 
   return (
 		<AppLayout
@@ -20,6 +39,8 @@ export function App() {
 			isGameEnded={isGameEnded}
 			isDraw={isDraw}
 			field={field}
+			setTurn={setTurn}
+			clearField={clearField}
 		/>
   )
 }

@@ -8,4 +8,9 @@
 	border: none;
 	border-radius: rem(16);
 	box-shadow: var(--shadow);
+	transition: var(--transition);
+	
+	&:hover {
+		transform: scale(1.05);
+	}
 }
