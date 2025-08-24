@@ -1,6 +1,7 @@
 import './styles/main.scss'
 import AppLayout from './components/AppLayout';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { WIN_PATTERNS } from './constants/constants.ts';
 
 export function App() {
 	
@@ -14,15 +15,45 @@ export function App() {
 		'', '', '',
 	]);
 	
+	useEffect(() => {
+		if (checkIsDraw() && !checkIsVictory()) {
+			setIsDraw(true);
+			setIsGameEnded(true);
+		}
+		if (checkIsVictory()) {
+			return setIsGameEnded(true);
+		}
+		changeCurrentPlayer();
+	}, [field]);
+	
+	function checkIsVictory () {
+		for (const pattern in WIN_PATTERNS) {
+			if (
+				field[WIN_PATTERNS[pattern][0]] === field[WIN_PATTERNS[pattern][1]] &&
+				field[WIN_PATTERNS[pattern][1]] === field[WIN_PATTERNS[pattern][2]] &&
+				field[WIN_PATTERNS[pattern][0]] !== ''
+			) return true;
+		}
+		return false;
+	}
+	
+	function checkIsDraw() {
+		return !field.includes('');
+	}
+	
+	function changeCurrentPlayer() {
+		setCurrentPlayer(prev => {
+			return prev === 'X' ? 'O' : 'X';
+		});
+	}
+	
 	function setTurn(index: number) {
 		if (field[index]) return;
+		
 		setField((prevState) => {
 			let newField = [...prevState];
 			newField[index] = currentPlayer;
 			return newField;
-		});
-		setCurrentPlayer(prev => {
-			return prev === 'X' ? 'O' : 'X';
 		});
 	}
 	
@@ -31,6 +62,8 @@ export function App() {
 			['','','',
 			'','','',
 			'','','',]);
+		setIsGameEnded(false);
+		setIsDraw(false);
 	}
 
   return (
