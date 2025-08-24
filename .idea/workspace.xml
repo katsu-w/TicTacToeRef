@@ -4,49 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f23e773e-ad8e-4e88-83c2-0c1cfe5d3ea9" name="Changes" comment="changed information table width and fix button visibility on mobile phones">
-      <change beforePath="$PROJECT_DIR$/.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.prettierrc.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eslint.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/icon.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AppLayout/AppLayout.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AppLayout/AppLayout.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AppLayout/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ControlPanel/ControlPanel.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ControlPanel/ControlPanelLayout/ControlPanelLayout.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ControlPanel/ControlPanelLayout/ControlPanelLayout.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ControlPanel/ControlPanelLayout/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ControlPanel/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Field/Field.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Field/FieldLayout/FieldLayout.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Field/FieldLayout/FieldLayout.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Field/FieldLayout/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Field/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Information/Information.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Information/InformationLayout/InformationLayout.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Information/InformationLayout/InformationLayout.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Information/InformationLayout/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Information/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants/constants.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/_globals.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/_normalize.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/_utils.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/_variables.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/helpers/_functions.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/helpers/_index.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/helpers/_media.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/main.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vite-env.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.app.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.node.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite.config.ts" beforeDir="false" />
+    <list default="true" id="f23e773e-ad8e-4e88-83c2-0c1cfe5d3ea9" name="Changes" comment="fix path">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,24 +81,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "deploy",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.lint.executor": "Run",
-    "settings.editor.selected.configurable": "fileTemplates",
-    "ts.external.directory.path": "C:\\Users\\katsu\\WebstormProjects\\TicTacToeRef\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;deploy&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.lint.executor&quot;: &quot;Run&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;fileTemplates&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\katsu\\WebstormProjects\\TicTacToeRef\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\katsu\WebstormProjects\TicTacToeRef" />
@@ -181,7 +141,7 @@
       <workItem from="1755797847151" duration="2880000" />
       <workItem from="1755882530983" duration="8807000" />
       <workItem from="1755950552664" duration="10976000" />
-      <workItem from="1756029909057" duration="12268000" />
+      <workItem from="1756029909057" duration="12814000" />
     </task>
     <task id="LOCAL-00001" summary="basic structure and taking out trash from styles">
       <option name="closed" value="true" />
@@ -271,7 +231,31 @@
       <option name="project" value="LOCAL" />
       <updated>1756044631519</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="deploy">
+      <option name="closed" value="true" />
+      <created>1756045381350</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1756045381350</updated>
+    </task>
+    <task id="LOCAL-00013" summary="deploy">
+      <option name="closed" value="true" />
+      <created>1756045505966</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1756045505966</updated>
+    </task>
+    <task id="LOCAL-00014" summary="fix path">
+      <option name="closed" value="true" />
+      <created>1756045784427</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1756045784427</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -288,6 +272,8 @@
     <MESSAGE value="added end game functional" />
     <MESSAGE value="added comments and icon" />
     <MESSAGE value="changed information table width and fix button visibility on mobile phones" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed information table width and fix button visibility on mobile phones" />
+    <MESSAGE value="deploy" />
+    <MESSAGE value="fix path" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix path" />
   </component>
 </project>
