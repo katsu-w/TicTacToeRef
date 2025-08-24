@@ -1,8 +1,12 @@
 import ControlPanelLayout from './ControlPanelLayout';
 
-export function ControlPanel() {
+interface IControlPanelProps {
+	clearField: () => void,
+}
+
+export function ControlPanel({clearField}: IControlPanelProps) {
 	
 	return (
-		<ControlPanelLayout></ControlPanelLayout>
+		<ControlPanelLayout onClick={clearField} ></ControlPanelLayout>
 	);
 }

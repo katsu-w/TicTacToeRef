@@ -10,6 +10,7 @@ export function Information(props: IInformation) {
 	const { currentPlayer, isDraw, isGameEnded } = props;
 	let output: string;
 	
+	// define text to output
 	if (isGameEnded && isDraw) {
 		output = 'Ничья';
 	} else if (isGameEnded && !isDraw) {

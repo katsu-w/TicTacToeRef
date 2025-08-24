@@ -8,17 +8,19 @@ interface IApp {
 	isGameEnded: boolean,
 	isDraw: boolean,
 	field: string[],
+	setTurn: (index: number) => void,
+	clearField: () => void,
 }
 
 export function AppLayout(props: IApp) {
-	const { currentPlayer, isGameEnded, isDraw, field } = props;
+	const { currentPlayer, isGameEnded, isDraw, field, setTurn, clearField } = props;
 	return (
 		<main
 			className="game container"
 		>
 			<Information isGameEnded={isGameEnded} currentPlayer={currentPlayer} isDraw={isDraw} />
-			<Field field={field} currentPlayer={currentPlayer} isGameEnded={isGameEnded} />
-			<ControlPanel isGameEnded={isGameEnded} />
+			<Field field={field} setTurn={setTurn} isGameEnded={isGameEnded} />
+			<ControlPanel clearField={clearField} />
 		</main>
 	);
 }
