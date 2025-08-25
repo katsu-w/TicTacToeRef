@@ -17,26 +17,21 @@ export function App() {
 	
 	// check for game end and change current player
 	useEffect(() => {
-		if (checkIsDraw() && !checkIsVictory()) {
-			setIsDraw(true);
-			setIsGameEnded(true);
-		}
+		setDraw();
 		if (checkIsVictory()) {
 			return setIsGameEnded(true);
 		}
-		if (
-			field.includes('X') ||
-			field.includes('O')
-		) changeCurrentPlayer();
+		// will be initialized only on turn or draw
+		changeCurrentPlayer();
 	}, [field]);
 	
 	// check if someone is won
 	function checkIsVictory () {
-		for (const pattern in WIN_PATTERNS) {
+		for (const pattern of WIN_PATTERNS) {
 			if (
-				field[WIN_PATTERNS[pattern][0]] === field[WIN_PATTERNS[pattern][1]] &&
-				field[WIN_PATTERNS[pattern][1]] === field[WIN_PATTERNS[pattern][2]] &&
-				field[WIN_PATTERNS[pattern][0]] !== ''
+				field[pattern[0]] === field[pattern[1]] &&
+				field[pattern[1]] === field[pattern[2]] &&
+				field[pattern[0]] !== ''
 			) return true;
 		}
 		return false;
@@ -49,9 +44,21 @@ export function App() {
 	
 	// change current turn player func
 	function changeCurrentPlayer() {
-		setCurrentPlayer(prev => {
-			return prev === 'X' ? 'O' : 'X';
-		});
+		if (
+			field.includes('X') ||
+			field.includes('O')
+		) {
+			setCurrentPlayer(prev => {
+				return prev === 'X' ? 'O' : 'X';
+			});
+		}
+	}
+	
+	function setDraw() {
+		if (checkIsDraw() && !checkIsVictory()) {
+			setIsDraw(true);
+			setIsGameEnded(true);
+		}
 	}
 	
 	// add mark on field func
