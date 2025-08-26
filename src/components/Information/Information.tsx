@@ -1,15 +1,15 @@
 import InformationLayout from './InformationLayout';
 
-interface IInformation {
-	currentPlayer: 'X' | 'O',
-	isGameEnded: boolean,
-	isDraw: boolean,
+interface IInformationProps {
+	currentPlayer: 'X' | 'O';
+	isGameEnded: boolean;
+	isDraw: boolean;
 }
 
-export function Information(props: IInformation) {
+export function Information(props: IInformationProps) {
 	const { currentPlayer, isDraw, isGameEnded } = props;
 	let output: string;
-	
+
 	// define text to output
 	if (isGameEnded && isDraw) {
 		output = 'Ничья';
@@ -20,8 +20,6 @@ export function Information(props: IInformation) {
 	} else {
 		output = `Ходит: ${currentPlayer}`;
 	}
-	
-	return (
-		<InformationLayout>{output}</InformationLayout>
-	);
+
+	return <InformationLayout>{output}</InformationLayout>;
 }
