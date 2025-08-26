@@ -8,7 +8,7 @@
 	background-color: var(--color-accent);
 	border-radius: rem(16);
 	box-shadow: var(--shadow);
-	
+
 	@include mobile-s {
 		margin-top: rem(90);
 	}

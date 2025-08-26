@@ -1,11 +1,10 @@
 import './ControlPanelLayout.scss';
 
 interface IControlPanelLayoutProps {
-	onClick: () => void,
+	onClick: () => void;
 }
 
-export function ControlPanelLayout({onClick}: IControlPanelLayoutProps) {
-	
+export function ControlPanelLayout({ onClick }: IControlPanelLayoutProps) {
 	return (
 		<button onClick={() => onClick()} className="retry-btn">
 			Начать заново
