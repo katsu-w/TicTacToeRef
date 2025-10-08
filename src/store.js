@@ -1,9 +1,16 @@
 import { createStore } from 'redux';
 
-function appReducer(state = {}, action) {
+const initValue = {
+	currentPlayer: 'X',
+	isGameEnded: false,
+	isDraw: false,
+	field: ['', '', '', '', '', '', '', '', ''],
+}
+
+function appReducer(state = initValue, action) {
 	switch (action.type) {
-		case "":
-			return;
+		case "SET_NEXT_TURN":
+			return state.currentPlayer === 'X' ? state.currentPlayer = 'O' : state.currentPlayer = 'X';
 		default:
 			return state;
 	}
