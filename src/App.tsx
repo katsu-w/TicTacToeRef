@@ -1,6 +1,6 @@
 import './styles/main.scss';
 import AppLayout from './components/AppLayout';
-import { useGame } from './hooks/useGame.tsx';
+import { useGame } from './hooks/useGame.ts';
 
 export function App() {
 	const { currentPlayer, isGameEnded, isDraw, field, setTurn, clearField } = useGame();
