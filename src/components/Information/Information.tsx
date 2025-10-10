@@ -1,13 +1,23 @@
 import InformationLayout from './InformationLayout';
+import { store } from '../../store.ts';
+import { useEffect, useState } from 'react';
 
-interface IInformationProps {
-	currentPlayer: 'X' | 'O';
-	isGameEnded: boolean;
-	isDraw: boolean;
-}
+export function Information() {
+	const { currentPlayerStore, isDrawStore, isGameEndedStore } = store.getState();
+	const [currentPlayer, setCurrentPlayer] = useState(currentPlayerStore);
+	const [isDraw, setIsDraw] = useState(isDrawStore);
+	const [isGameEnded, setIsGameEnded] = useState(isGameEndedStore);
 
-export function Information(props: IInformationProps) {
-	const { currentPlayer, isDraw, isGameEnded } = props;
+	useEffect(() => {
+		const unsubscribe = store.subscribe(() => {
+			const { isDrawStore, currentPlayerStore, isGameEndedStore } = store.getState();
+			setIsGameEnded(isGameEndedStore);
+			setIsDraw(isDrawStore);
+			setCurrentPlayer(currentPlayerStore);
+		});
+		return () => unsubscribe();
+	}, []);
+
 	let output: string;
 
 	// define text to output

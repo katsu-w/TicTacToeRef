@@ -3,25 +3,19 @@ import { WIN_PATTERNS } from '../constants/constants.ts';
 import { store } from '../store.ts';
 
 export function useGame() {
-	const { fieldStore, isGameEndedStore, isDrawStore, currentPlayerStore } =
-		store.getState();
-	console.log(currentPlayerStore);
+	const { fieldStore, currentPlayerStore } = store.getState();
 	// const required states
 	const [currentPlayer, setCurrentPlayer] = useState(currentPlayerStore);
-	const [isGameEnded, setIsGameEnded] = useState<boolean>(isGameEndedStore);
-	const [isDraw, setIsDraw] = useState<boolean>(isDrawStore);
-
 	const [field, setField] = useState(fieldStore);
 
-	store.subscribe(() => {
-		console.log('asd');
-		const { fieldStore, isGameEndedStore, isDrawStore, currentPlayerStore } =
-			store.getState();
-		setCurrentPlayer(currentPlayerStore);
-		setIsGameEnded(isGameEndedStore);
-		setIsDraw(isDrawStore);
-		setField(fieldStore);
-	});
+	useEffect(() => {
+		const unsubscribe = store.subscribe(() => {
+			const { fieldStore, currentPlayerStore } = store.getState();
+			setCurrentPlayer(currentPlayerStore);
+			setField(fieldStore);
+		});
+		return () => unsubscribe();
+	}, []);
 
 	// check for game end and change current player
 	useEffect(() => {
@@ -76,6 +70,7 @@ export function useGame() {
 		// });
 		let newField = field;
 		newField[index] = currentPlayer;
+		console.log(newField);
 		store.dispatch({ type: 'SET_MARK', payload: { fieldStore: newField } });
 	}
 
@@ -85,11 +80,7 @@ export function useGame() {
 	}
 
 	return {
-		currentPlayer: currentPlayer,
-		isGameEnded: isGameEnded,
-		isDraw: isDraw,
-		field: field,
-		setTurn: (index: number) => setTurn(index),
-		clearField: () => clearField(),
+		setTurn,
+		clearField,
 	};
 }

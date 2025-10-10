@@ -21,9 +21,10 @@ function appReducer(
 ) {
 	switch (action.type) {
 		case 'CHANGE_PLAYER_TURN':
-			return state.currentPlayerStore === 'X'
+			state.currentPlayerStore === 'X'
 				? (state.currentPlayerStore = 'O')
 				: (state.currentPlayerStore = 'X');
+			return state;
 		case 'END_GAME':
 			return (state.isGameEndedStore = true);
 		case 'SET_DRAW':
@@ -31,12 +32,13 @@ function appReducer(
 			state.isDrawStore = true;
 			return state;
 		case 'SET_MARK':
-			if (action.payload?.fieldStore) state.fieldStore = action.payload.fieldStore;
+			if (action.payload?.fieldStore) state.fieldStore = [...action.payload.fieldStore];
 			return state;
 		case 'RESTART_GAME':
 			state.isGameEndedStore = false;
 			state.isDrawStore = false;
 			state.fieldStore = ['', '', '', '', '', '', '', '', ''];
+			state.currentPlayerStore = 'X';
 			return state;
 		default:
 			return state;
