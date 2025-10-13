@@ -19,27 +19,32 @@ function appReducer(
 		};
 	},
 ) {
+	let newState = { ...state };
 	switch (action.type) {
 		case 'CHANGE_PLAYER_TURN':
-			state.currentPlayerStore === 'X'
-				? (state.currentPlayerStore = 'O')
-				: (state.currentPlayerStore = 'X');
-			return state;
+			newState.currentPlayerStore === 'X'
+				? (newState.currentPlayerStore = 'O')
+				: (newState.currentPlayerStore = 'X');
+			return newState;
 		case 'END_GAME':
-			return (state.isGameEndedStore = true);
+			newState.isGameEndedStore = true;
+			return newState;
 		case 'SET_DRAW':
-			state.isGameEndedStore = true;
-			state.isDrawStore = true;
-			return state;
+			newState.isGameEndedStore = true;
+			newState.isDrawStore = true;
+			return newState;
 		case 'SET_MARK':
-			if (action.payload?.fieldStore) state.fieldStore = [...action.payload.fieldStore];
-			return state;
+			if (action.payload?.fieldStore)
+				newState.fieldStore = [...action.payload.fieldStore];
+			return newState;
 		case 'RESTART_GAME':
-			state.isGameEndedStore = false;
-			state.isDrawStore = false;
-			state.fieldStore = ['', '', '', '', '', '', '', '', ''];
-			state.currentPlayerStore = 'X';
-			return state;
+			newState = {
+				currentPlayerStore: 'X',
+				isGameEndedStore: false,
+				isDrawStore: false,
+				fieldStore: ['', '', '', '', '', '', '', '', ''],
+			};
+			return newState;
 		default:
 			return state;
 	}
