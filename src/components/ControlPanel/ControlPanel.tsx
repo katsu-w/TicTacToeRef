@@ -1,9 +1,10 @@
 import ControlPanelLayout from './ControlPanelLayout';
+import { store } from '../../store.ts';
 
-interface IControlPanelProps {
-	clearField: () => void;
-}
+export function ControlPanel() {
+	const clearField = () => {
+		store.dispatch({ type: 'RESTART_GAME' });
+	};
 
-export function ControlPanel({ clearField }: IControlPanelProps) {
 	return <ControlPanelLayout onClick={clearField}></ControlPanelLayout>;
 }
