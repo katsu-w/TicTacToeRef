@@ -1,9 +1,11 @@
 import ControlPanelLayout from './ControlPanelLayout';
-import { store } from '../../store.ts';
+import { useDispatch } from 'react-redux';
 
 export function ControlPanel() {
+	const dispatch = useDispatch();
+
 	const clearField = () => {
-		store.dispatch({ type: 'RESTART_GAME' });
+		dispatch({ type: 'RESTART_GAME' });
 	};
 
 	return <ControlPanelLayout onClick={clearField}></ControlPanelLayout>;
