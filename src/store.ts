@@ -1,6 +1,7 @@
 import { createStore } from 'redux';
+import type { IStore } from './types/types.ts';
 
-const initValue = {
+const initValue: IStore = {
 	currentPlayerStore: 'X',
 	isGameEndedStore: false,
 	isDrawStore: false,
@@ -11,40 +12,35 @@ function appReducer(
 	state = initValue,
 	action: {
 		type: string;
-		payload?: {
-			currentPlayerStore?: 'X' | 'O';
-			fieldStore?: string[];
-			isGameEndedStore?: boolean;
-			isDrawStore?: boolean;
-		};
+		payload?: IStore;
 	},
 ) {
-	let newState = { ...state };
 	switch (action.type) {
 		case 'CHANGE_PLAYER_TURN':
-			newState.currentPlayerStore === 'X'
-				? (newState.currentPlayerStore = 'O')
-				: (newState.currentPlayerStore = 'X');
-			return newState;
+			return {
+				...state,
+				currentPlayerStore: state.currentPlayerStore === 'X' ? 'O' : 'X',
+			};
 		case 'END_GAME':
-			newState.isGameEndedStore = true;
-			return newState;
+			return {
+				...state,
+				isGameEndedStore: true,
+			};
 		case 'SET_DRAW':
-			newState.isGameEndedStore = true;
-			newState.isDrawStore = true;
-			return newState;
+			return {
+				...state,
+				isGameEndedStore: true,
+				isDrawStore: true,
+			};
 		case 'SET_MARK':
 			if (action.payload?.fieldStore)
-				newState.fieldStore = [...action.payload.fieldStore];
-			return newState;
+				return {
+					...state,
+					fieldStore: [...action.payload?.fieldStore],
+				};
+			return state;
 		case 'RESTART_GAME':
-			newState = {
-				currentPlayerStore: 'X',
-				isGameEndedStore: false,
-				isDrawStore: false,
-				fieldStore: ['', '', '', '', '', '', '', '', ''],
-			};
-			return newState;
+			return { ...initValue };
 		default:
 			return state;
 	}
