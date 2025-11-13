@@ -6,6 +6,7 @@ interface IFieldLayoutProps {
 }
 
 export function FieldLayout({ field, onClick }: IFieldLayoutProps) {
+	console.log(field);
 	return (
 		<section className="playground">
 			{field.map((cell, index) => (
