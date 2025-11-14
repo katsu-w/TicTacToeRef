@@ -12,14 +12,11 @@ export class CApp extends Component<any, IStore> {
 	}
 	
 	componentDidUpdate() {
-		console.log('update');
 		this.setDraw();
 		if (this.checkIsVictory()) {
-			console.log('checkIsVictory');
 			this.props.endGame();
 			return;
 		}
-		console.log(this);
 		// will be initialized only on turn or draw
 	  this.props.changePlayer();
 	}
