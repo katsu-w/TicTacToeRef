@@ -18,7 +18,10 @@ export class CApp extends Component<any, IStore> {
 			return;
 		}
 		// will be initialized only on turn or draw
-	  this.props.changePlayer();
+	  if (this.props.fieldStore.includes('X') || this.props.fieldStore.includes('O')) {
+		  this.props.changePlayer()
+		}
+		
 	}
 	
 	setDraw() {

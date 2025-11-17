@@ -9,7 +9,7 @@ const initValue: IStore = {
 };
 
 function appReducer(
-	state = initValue,
+	state = { ...initValue },
 	action: {
 		type: string;
 		payload?: IStore;

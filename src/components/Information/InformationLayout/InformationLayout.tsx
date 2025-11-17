@@ -1,11 +1,25 @@
 import './InformationLayout.scss';
-import type { ReactNode } from 'react';
+import { Component, type ReactNode } from 'react';
 
 interface IInformationLayoutProps {
 	children: ReactNode;
 }
 
-export function InformationLayout({ children }: IInformationLayoutProps) {
+export class InformationLayout extends Component<any, any> {
+	constructor(props: IInformationLayoutProps) {
+		super(props);
+	}
+	
+	render() {
+		return (
+			<div className="information">
+				<span>{this.props.children}</span>
+			</div>
+		);
+	}
+}
+
+export function FInformationLayout({ children }: IInformationLayoutProps) {
 	return (
 		<div className="information">
 			<span>{children}</span>
