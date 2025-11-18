@@ -2,8 +2,25 @@ import './AppLayout.scss';
 import Information from '../Information';
 import Field from '../Field';
 import ControlPanel from '../ControlPanel';
+import { Component } from 'react';
 
-export function AppLayout() {
+export class AppLayout extends Component<any, any> {
+	constructor(props: any) {
+		super(props);
+	}
+	
+	render() {
+		return (
+			<main className="game container">
+				<Information />
+				<Field />
+				<ControlPanel />
+			</main>
+		);
+	}
+}
+
+export function FAppLayout() {
 	return (
 		<main className="game container">
 			<Information />
