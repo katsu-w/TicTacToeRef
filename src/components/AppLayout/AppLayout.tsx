@@ -11,7 +11,7 @@ export class AppLayout extends Component<any, any> {
 	
 	render() {
 		return (
-			<main className="game container">
+			<main className="flex flex-col justify-between items-center h-dvh container">
 				<Information />
 				<Field />
 				<ControlPanel />
