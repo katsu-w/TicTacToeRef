@@ -1,4 +1,4 @@
-import './AppLayout.scss';
+// import './AppLayout.scss';
 import Information from '../Information';
 import Field from '../Field';
 import ControlPanel from '../ControlPanel';
@@ -11,7 +11,7 @@ export class AppLayout extends Component<any, any> {
 	
 	render() {
 		return (
-			<main className="flex flex-col justify-between items-center h-dvh container">
+			<main className="flex flex-col justify-between items-center h-dvh max-w-[1110px] mx-auto">
 				<Information />
 				<Field />
 				<ControlPanel />
