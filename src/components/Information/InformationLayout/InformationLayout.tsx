@@ -1,4 +1,3 @@
-import './InformationLayout.scss';
 import { Component, type ReactNode } from 'react';
 
 interface IInformationLayoutProps {
@@ -12,7 +11,7 @@ export class InformationLayout extends Component<any, any> {
 	
 	render() {
 		return (
-			<div className="information">
+			<div className="max-w-[80%] mt-22 sm:mt-5 mx-auto mb-1 px-4 py-2 text-center bg-(--color-accent) rounded-2xl shadow-(--shadow)">
 				<span>{this.props.children}</span>
 			</div>
 		);
