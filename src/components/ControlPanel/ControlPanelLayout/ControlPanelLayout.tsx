@@ -1,4 +1,3 @@
-import './ControlPanelLayout.scss';
 import { Component } from 'react';
 
 interface IControlPanelLayoutProps {
